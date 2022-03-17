@@ -1,12 +1,12 @@
 Lets suppose you have ssh access on a server as a testuser .
 You can cd on tmp directory and create the following simple script .
-The whole idea is to accidentaly make a root user execute our script . This will be possible if we name our executable as a possible wrong command like sl (not ls) .
+The whole idea is to accidentaly make a root user execute our script . This will be possible if we name our executable as a possible wrong command like sl (wrong spelled ls) .
 Then we will copy root user's shell to onother executable where we will have access . Executing the new executable  will give us root privilleges.
 (assuming the command spelling error happens from a root user , we'll need to wait a bit :P. You can also write multiple scripts with wrong spelled commands )
 
 ```
 #cd on /tmp as any user without privilleges and create the following script.
-#Its important to name your script , as a frequent wrong possible command like sl(not ls) , mroe(not more) etc..
+#Its important to name your script , as a frequent wrong possible command like sl , mroe etc..
 vim sl
 
 #!/bin/bash 
