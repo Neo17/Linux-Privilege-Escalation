@@ -19,7 +19,7 @@ chmod u+s /tmp/myfile
 2. cp $SHELL /tmp/myfile ---> copies the user that executed our script bash shell to /tmp/myfile
 3. chmod u+s /tmp/myfile -----> enables sticky bit , so if it is a root user we will then execute the new script , as root.
 
-When the /tmp/myfile is finally created it is important to execute it with the -p option to keep the privilleges of the root.
+When a root user accidentally types sl instead of ls on /tmp , he runs our executable and the /tmp/myfile is finally created .It is  important to execute the new file  with the -p option to keep the privilleges of the root.
 
 ```
 cd /tmp
